@@ -16,10 +16,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 Plugin 'tpope/vim-fugitive'
 Plugin 'moby/moby' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-map <C-o> :Lex<CR>
+map <C-o> :NERDTreeToggle<CR>
 map <C-p> :Files<CR>
 nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
