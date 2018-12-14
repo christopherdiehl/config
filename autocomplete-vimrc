@@ -36,7 +36,7 @@ set ai
 set si
 set expandtab
 set smarttab
-
+set number
 syntax enable
 " Copy to clipboard
 if has('unnamedplus')
@@ -96,7 +96,14 @@ let g:ale_fixers = {
 \   'python': ['yapf'],
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
+\   'go': ['goimports','gofmt'],
 \}
+
+"Show warnings & errors in lightline
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
 
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
